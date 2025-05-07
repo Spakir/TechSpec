@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: TechSpec
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    username: user
+    password: user123
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/tech_spec_db
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/master.yaml
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: DEBUG
