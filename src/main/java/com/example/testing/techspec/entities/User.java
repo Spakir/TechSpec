@@ -28,6 +28,7 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(name = "registered_at", updatable = false)
     private LocalDateTime registeredAt;
 
     @Column(nullable = false)
@@ -37,4 +38,9 @@ public class User {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @ToString.Exclude
     private List<Subscribe> subscribes = new ArrayList<>();
+
+    @PrePersist
+    protected void onCreate() {
+        this.registeredAt = LocalDateTime.now();
+    }
 }
