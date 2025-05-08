@@ -1,6 +1,7 @@
 package com.example.testing.techspec.service;
 
 import com.example.testing.techspec.dto.SubscribeDto;
+import com.example.testing.techspec.dto.TopSubscriptionDto;
 import com.example.testing.techspec.entities.Subscribe;
 import com.example.testing.techspec.entities.User;
 import com.example.testing.techspec.mapper.SubscribeMapper;
@@ -52,9 +53,7 @@ public class SubscribeServiceImpl implements SubscribeService {
     }
 
     @Override
-    public List<SubscribeDto> getTopSubscriptions() {
-        return subscribeRepository.findTopSubscriptions().stream()
-                .map(subscribeMapper::toDto)
-                .toList();
+    public List<TopSubscriptionDto> getTopSubscriptions() {
+        return subscribeRepository.findTopSubscriptions();
     }
 }

@@ -1,6 +1,7 @@
 package com.example.testing.techspec.service;
 
 import com.example.testing.techspec.dto.SubscribeDto;
+import com.example.testing.techspec.dto.TopSubscriptionDto;
 import com.example.testing.techspec.entities.Subscribe;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface SubscribeService {
 
     void deleteSubscription(Long userId, Long subscriptionId);
 
-    List<SubscribeDto> getTopSubscriptions();
+    List<TopSubscriptionDto> getTopSubscriptions();
 }
