@@ -15,7 +15,6 @@ public class SubscribeDto {
     @NotNull(message = "Тип сервиса не должен быть null")
     private String serviceType;
 
-    @NotNull(message = "Id пользователя не должно быть null")
     private Long userId;
 
     @NotNull(message = "Начало подписки не должно быть null")
