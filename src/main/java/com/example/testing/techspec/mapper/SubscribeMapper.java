@@ -5,6 +5,7 @@ import com.example.testing.techspec.entities.Subscribe;
 import com.example.testing.techspec.entities.User;
 import com.example.testing.techspec.enums.SubscribeServiceType;
 import com.example.testing.techspec.service.UserService;
+import com.example.testing.techspec.service.UserServiceImpl;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
